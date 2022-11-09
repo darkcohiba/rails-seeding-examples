@@ -1,19 +1,12 @@
 require 'faker'
-
-
-
 puts 'creating seeds'
-
 puts'seeding cohorts'
-
 Cohort.create(title:"February 22, 2022", graduated: true)
 Cohort.create(title:"May 25, 2022", graduated: true)
 Cohort.create(title:"August 8, 2022", graduated: false)
 Cohort.create(title:"June 27, 2022", graduated: false)
 Cohort.create(title:"September 19, 2022", graduated: false)
-
 puts 'seeding students'
-
 #gives you ids
 puts 'testing ids'
 10.times do
@@ -32,13 +25,12 @@ puts 'testing all.id'
     puts Cohort.all.sample.id
 end
 
-# 50.times do
-#     Student.create(name: Faker::Name.unique.name, female: Faker::Boolean.boolean, grade: Faker::Number.between(from: 1, to: 10), cohort: Cohort.all.sample)
-# end
+50.times do
+    Student.create(name: Faker::Name.unique.name, female: Faker::Boolean.boolean, grade: Faker::Number.between(from: 1, to: 10), cohort: Cohort.all.sample)
+end
 
-# puts 'finished seeding students'
-
-# puts 'finished seeding'
+puts 'finished seeding students'
+puts 'finished seeding'
 
 
 
